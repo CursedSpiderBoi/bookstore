@@ -6,11 +6,12 @@
   justify-content: center;
   align-items: center;
   height: 30rem; /* Ensures it occupies the full screen height */
+  width:25rem;
   margin: 0;
   padding: 5%;
   background-color: var(--background);
   max-height: fit-content;
-  max-width: fit-content;
+  max-width: 50rem;
   border: 2px solid #535353; /* Add border */
   border-radius: 5rem;
 }

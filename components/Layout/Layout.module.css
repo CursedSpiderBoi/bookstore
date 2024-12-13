@@ -43,13 +43,29 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logoutButton {
-  background: var(--button-bg);
-  color: var(--heading-color);
+.logoutButton,
+.signInButton {
   border: none;
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.logoutButton {
+  background: var(--button-bg);
+  color: var(--heading-color);
+}
+
+.signInButton {
+  background-color: #48494b;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.signInButton:hover {
+  background-color: #0056b3;
 }
 
 .themeSwitch {
@@ -129,54 +145,7 @@ input:checked + .slider:before {
   text-decoration: none;
   font-weight: bold;
   padding: 5%;
-  border:var(--link-color);
+  border: var(--link-color);
   border-width: 10px;
   border-radius: 2%;
 }
-
-/* Additional Styles for Proper Alignment and Spacing */
-.userWrapper {
-  position: relative;
-}
-
-.username {
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--heading-color);
-}
-
-.popup {
-  position: absolute;
-  top: 30px;
-  right: 0;
-  background: var(--popup-bg);
-  border: 1px solid var(--border-color);
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.logoutButton {
-  background: var(--button-bg);
-  color: var(--heading-color);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.signInButton {
-  background-color: #48494b;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-right: 10px;
-}
-
-.signInButton:hover {
-  background-color: #0056b3;
-}
-

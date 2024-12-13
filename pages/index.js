@@ -6,25 +6,33 @@ import { getAllAuthors, getAllGenres, getFeaturedBooks } from "@/helpers/api-uti
 import { useState } from "react";
 
 // '/' page (shows all the featured books)
-export default function Home( {books, authors, genres}) {
+export default function Home({ books, authors, genres }) {
 
   const router = useRouter();
-  const [ loading , setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const bookClicked = (id) => {
-    setLoading(true)
+    setLoading(true);
     router.push("/books/" + id);
   };
 
   const viewAllBooks = () => {
-    setLoading(true)
+    setLoading(true);
     router.push("/books");
   };
 
-  if (loading || books.lenght === 0 || genres.lenght === 0 || authors.lenght === 0) {  
+  if (loading) {
     return (
       <div className={styling.loading}>
         <div className={styling.spinner}></div>
+      </div>
+    );
+  }
+
+  if (books.length === 0 || genres.length === 0 || authors.length === 0) {
+    return (
+      <div className={styling.heading}>
+        <p>Something is not right</p>
       </div>
     );
   }
@@ -63,7 +71,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      books: dataBooks ,
+      books: dataBooks,
       authors: dataAuthors,
       genres: dataGenres,
     },

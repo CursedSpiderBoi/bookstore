@@ -1,6 +1,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --chakra-colors-gray-50: #f7fafc;
+  --chakra-colors-gray-900: #171923;
+  --chakra-colors-blue-500: #3182ce;
+  --chakra-colors-blue-600: #2b6cb0;
+  --chakra-colors-gray-100: #f7fafc;
+  --chakra-colors-gray-200: #edf2f7;
+  --chakra-colors-gray-300: #e2e8f0;
+  --chakra-colors-gray-400: #cbd5e0;
+  --chakra-colors-gray-500: #a0aec0;
+  --chakra-colors-gray-600: #718096;
+  --chakra-colors-gray-700: #4a5568;
+  --chakra-colors-gray-800: #2d3748;
+  --chakra-colors-gray-900: #1a202c;
+  --chakra-colors-blue-500: #4299e1;
+  --chakra-colors-blue-600: #3182ce;
+  --chakra-colors-blue-700: #2b6cb0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,8 +47,12 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--chakra-colors-blue-500);
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--chakra-colors-blue-600);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,21 +61,20 @@ a {
   }
 }
 
-
-body.dark p{
+body.dark p {
   color: #fff;
 }
 
 body.light {
   /* General Background Color */
-  background-color: #fff;
-  --background: #fff;
+  background-color: var(--chakra-colors-gray-50);
+  --background: var(--chakra-colors-gray-50);
 
-  /* header on each page*/
-  --heading-color: black;
-  --link-color: black;
-  --link-hover-color: #2c7;
-    
+  /* Header on Each Page */
+  --heading-color: var(--chakra-colors-gray-900);
+  --link-color: var(--chakra-colors-blue-500);
+  --link-hover-color: var(--chakra-colors-blue-600);
+
   /* Buttons */
   --button-bg: #ddd;
   --button-color: #333;
@@ -79,21 +98,20 @@ body.light {
 
 body.dark {
   /* General Background Color */
-  background-color: #333;
-  --background: #333;
+  background-color: var(--chakra-colors-gray-900);
+  --background: var(--chakra-colors-gray-900);
 
-  /* Header on Each Page*/
+  /* Header on Each Page */
   --heading-color: #fff;
-  --link-color: #fff;
-  --link-hover-color: #2c7;
+  --link-color: var(--chakra-colors-blue-500);
+  --link-hover-color: var(--chakra-colors-blue-600);
 
-   /* Buttons */
+  /* Buttons */
   --button-bg: #444;
   --button-color: #fff;
   --button-text-color: #fff;
   --button-hover-bg: #333;
 
-  
   /* Books */
   --booklist-bg: #333;
   --card-bg: #3a3a3a;
@@ -111,7 +129,7 @@ body.dark {
 
 .container {
   padding: 2%;
-  border:#555 ;
+  border: 1px solid #555;
   border-radius: 5px;
+  margin: 1rem;
 }
-
